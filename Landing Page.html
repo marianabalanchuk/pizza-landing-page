@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pizza 🍕</title>
+</head>
+
+<style>
+  .content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: linear-gradient(44.8deg, rgba(255, 136, 102, 0.67) -53.1%, rgba(255, 221, 136, 0.28) 49%);
+    border-radius: 15px;
+  }
+
+  h1 {
+    font-size: 46px;
+    line-height: 1.5em;
+    margin: 5px auto;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  ul {
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  button.order-pizza:hover {
+    cursor: pointer;
+    background: #caff70;
+    animation: none;
+  }
+
+  button.order-pizza {
+    display: block;
+    margin: 20px auto;
+    color: black;
+    border: 1px solid #bf8d3c;
+    border-radius: 15px;
+    padding: 20px 34px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 22px;
+    background: #ff3333;
+  }
+
+  .img-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .main-image {
+    max-width: 300px;
+  }
+
+  .pizza-gif {
+    vertical-align: text-bottom;
+    height: 50px;
+    width: 60px;
+  }
+
+  .intro {
+    font-size: 16px;
+    margin: 10px 20px;
+    padding: 20px;
+  }
+
+  .pizza-quote {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px;
+    padding: 10px;
+    font-style: italic;
+  }
+
+  .author-info {
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-style: italic;
+    padding: 10px 0;
+  }
+</style>
+
+<body>
+
+  <div class="content">
+
+    <h1>Pizza<img class="pizza-gif"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/047/801/original/pizza-gif.gif?1665226822" />
+    </h1>
+
+    <h2>The Most Popular Food In The World</h2>
+
+    <p class="intro">
+      Pizza tops the list of the most popular foods in the world. Every year,
+      people consume around 5 billion pizzas. Moreover, this open-faced
+      sandwich, tops the list of most photographed foods. <br />No wonder there is a <a
+        href="https://www.daysoftheyear.com/days/pizza-day/" target="_blank" />
+      World Pizza Day</a> to celebrate it.
+    </p>
+
+    <div class="pizza-quote">
+      "Anyone who says that money cannot buy happiness has clearly never spent their money on pizza."
+    </div>
+
+    <div class="img-container">
+      <img class="main-image"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/047/798/original/pizza1.jpg?1665224222"
+        alt="Pizza on a table" />
+      <img class="main-image"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/047/799/original/pizza2.jpg?1665224243"
+        alt="Pizza on a table" />
+      <img class="main-image"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/047/800/original/pizza3.jpg?1665224269"
+        alt="Pizza on a table" />
+    </div>
+
+    <ul class="pizza-facts">
+      <h3>DELICIOUS FACTS ABOUT PIZZA</h3>
+      <li class="fact">🍕The largest pizza has a total surface area of 1,261.65 m²🍕 </li>
+      <li class="fact">🍕About 3 billion pizzas are sold worldwide each year🍕</li>
+      <li class="fact">🍕Saturday night is the most popular night to eat pizza🍕</li>
+      <li class="fact">🍕The most expensive pizza in the world costs about $12,000🍕</li>
+      <li class="fact">🍕The first pizza is thought to have been invented in Naples in the early 1500s🍕</li>
+      <li class="fact">🍕NASA funded & tested a 3D printer that can make pizza for astronauts🍕</li>
+      <li class="fact">🍕Pizzas in Italy were originally square-shaped🍕</li>
+    </ul>
+
+    <button class="order-pizza">ORDER PIZZA!</button>
+    <hr />
+    <p class="author-info">This page was created by Mariana Balanchuk</p>
+  </div>
+
+  <script>
+
+    function orderNow() {
+      let name = prompt("What is your name?");
+      let email = prompt("What is your email address?");
+      if (name !== null && email !== null) {
+        alert(`Thank you, ${name}! We'll be in touch by email!`);
+      }
+    }
+
+    let orderPizzaButton = document.querySelector(".order-pizza");
+    orderPizzaButton.addEventListener("click", orderNow);
+
+  </script>
+</body>
+
+</html>
